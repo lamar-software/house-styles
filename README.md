@@ -55,9 +55,8 @@
 
 ##### Commits
 - Each commit should be a single logical change. Don't make several logical changes in one commit. For example, if a patch fixes a bug and optimizes the performance of a feature, split it into two separate commits.
--  Ideally, it should be no longer than 50 characters.
--  It should be capitalized and written in imperative present tense.
--  It should not end with a period since it is effectively the commit title.
+-  Ideally, coimmit messages should be no longer than 50 characters.
+-  Commit messages should be capitalized and written in imperative present tense and should not end with a period.
  ```
  # Good
  Mark huge records as obsolete when clearing hinting faults
