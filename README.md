@@ -11,6 +11,7 @@
 - Element attributes should follow this convention:
  ```
  <selector
+    *structuralDirective
     #localReference
     [(ngModel)]="property"
     directive
