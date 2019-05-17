@@ -4,21 +4,53 @@
 ## General
 - Use 2 spaces.
 - Column number should not exceed 100.
+- Add block comments only when necessary; many functions are self-explanatory. Ask yourself, "Does the function explain what I'm doing?"
+ ```TypeScript
+ // Good
+ /**
+  * Check the template and update the data model
+  */
+ function performCheck(): void { ... }
+ 
+ // Bad
+ /**
+  * Logs the user in
+  * @param { payload: AuthPayload } Authentication payload
+  */
+ function login(payload: AuthPayload): void { ... }
+ ```
+- Always add a space between keywords, operators, clauses, and syntax delimieters
+```TypeScript
+// Good
+if (car.model === 'F150') {
+  this.pickupTruckCount += 1;
+}
+
+// Bad
+if(car.model ==='F150'){
+  this.pickupTruckCount+=1;
+}
+```
+- Always add a space when destructuring objects. Never add a space when destructuring arrays.
+```
+const [car] = cars;
+const { model: carModel } = car;
+```
 
 ## HTML
 - Element attributes should follow this convention:
  ```HTML
  <selector
-    *structuralDirective
-    #localReference
-    [(ngModel)]="property"
-    directive
-    (event)="handler()"
-    [property]="expression"
-    id="id"
-    class="class-list"
-    type="type"
-    placeholder="placeholder">
+   *structuralDirective
+   #localReference
+   [(ngModel)]="property"
+   directive
+   (event)="handler()"
+   [property]="expression"
+   id="id"
+   class="class-list"
+   type="type"
+   placeholder="placeholder">
  </selector>
  ```
 
@@ -27,25 +59,25 @@
  ```CSS
  // Good
  .class {
-     border-radius: 5px;
-     margin: 0;
-     padding: 12px 32px;
-     z-index 9;
+   border-radius: 5px;
+   margin: 0;
+   padding: 12px 32px;
+   z-index 9;
  }
 
  // Bad
  .class {
-     padding: 12px 32px;
-     z-index 9;
-     border-radius: 5px;
-     margin: 0;
+   padding: 12px 32px;
+   z-index 9;
+   border-radius: 5px;
+   margin: 0;
  }
  ```
 
 ## TypeScript
 #### Angular
 - Imports are grouped in meaningful groups, and their order should be as follows, with a line  between each import group.
-```JavaScript
+```TypeScript
 import ... from '@angular/...' // Angular packages
 import ... from 'classes/...' // Classes
 import ... from 'services/...' // Services
@@ -54,7 +86,7 @@ import ... from '...' // Third-party libraries, in alphabetical order
 ```
 
 For example:
-```JavaScript
+```TypeScript
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
@@ -70,7 +102,7 @@ import * as moment from 'moment';
 ```
 
 - Class properties also have a structure, though it is loosely-defined and the developer is responsible for grouping together properties.  Class properties should follow this convention as best as possible:
-```JavaScript
+```TypeScript
 // Decorated class properties, i.e.
 @ViewChid() 
 public readonly container: ElementRef;
@@ -97,11 +129,6 @@ constructor() {}
 
 // Finally, Angular's lifecycle methods in the order in which they are called
 ```
-
-For example:
-```
-```
-
 
 ## Git
 #### Branches
