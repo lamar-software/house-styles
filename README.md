@@ -32,7 +32,7 @@ if(car.model ==='F150'){
 }
 ```
 - Always add a space when destructuring objects. Never add a space when destructuring arrays.
-```
+```TypeScript
 const [car] = cars;
 const { model: carModel } = car;
 ```
