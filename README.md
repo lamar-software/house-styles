@@ -2,12 +2,11 @@
 
 
 ## General
-------
+
 - Use 2 spaces.
 - Column number should not exceed 100.
 
 ## HTML
-------
 - Element attributes should follow this convention:
  ```
  <selector
@@ -25,7 +24,6 @@
  ```
 
 ## CSS
-------
 - Style declarations should be in alphabetical order.
  ```
  # Good
@@ -46,7 +44,6 @@
  ```
 
 ## TypeScript
-------
 #### Angular
 - Imports are grouped in meaningful groups, and their order should be as follows, with a line  between each import group.
 ```
@@ -75,7 +72,6 @@ import * as moment from 'moment';
 
 
 ## Git
-------
 #### Branches
 - Branches should follow this convention:
  ```
