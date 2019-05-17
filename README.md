@@ -13,6 +13,7 @@
  <selector
     #localReference
     [(ngModel)]="property"
+    directive
     (event)="handler()"
     [property]="expression"
     id="id"
