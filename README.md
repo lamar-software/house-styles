@@ -27,7 +27,7 @@
  ```CSS
  // Good
  .class {
-     border-radius 5px;
+     border-radius: 5px;
      margin: 0;
      padding: 12px 32px;
      z-index 9;
