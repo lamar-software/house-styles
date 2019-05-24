@@ -39,6 +39,7 @@ const [car] = cars;
 const { model: carModel } = car;
 ```
 
+#### Naming
 - Variable names should _not_ capitalize abbreviations, only acronyms if they are _not_ standalone. Variable names should also follow camel case. For example:
 ```TypeScript
 // Good
@@ -52,6 +53,17 @@ const carName = 'Richard';
 const bad_example = 'Snake case';
 const AnotherBadExample = 'Pascal case';
 const what-are-you-even = 'Kebab case';
+```
+
+- Function / method names should always have _descriptive_ verbs and never end with a verb.
+```TypeScript
+// Good
+function createManufacture() { ... }
+function fetchAllManufactures() { ... }
+
+// Bad
+function doCreate() { ... }
+function addManufactureDo() { ... }
 ```
 
 #### SQL Statements
