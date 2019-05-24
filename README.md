@@ -39,7 +39,13 @@ const [car] = cars;
 const { model: carModel } = car;
 ```
 
-#### Naming
+#### Naming Classes
+- Classes should _always_ use Pascal case.
+```TypeScript
+class CarManufacture {}
+```
+
+#### Naming Variables
 - Variable names should _not_ capitalize abbreviations, only acronyms if they are _not_ standalone. Variable names should also follow camel case. For example:
 ```TypeScript
 // Good
@@ -120,23 +126,34 @@ await db.query(`
 
 ## CSS
 - Style declarations should be in alphabetical order.
- ```CSS
- // Good
- .class {
-   border-radius: 5px;
-   margin: 0;
-   padding: 12px 32px;
-   z-index 9;
- }
+```CSS
+// Good
+.class {
+  border-radius: 5px;
+  margin: 0;
+  padding: 12px 32px;
+  z-index 9;
+}
 
- // Bad
- .class {
-   padding: 12px 32px;
-   z-index 9;
-   border-radius: 5px;
-   margin: 0;
- }
- ```
+// Bad
+.class {
+  padding: 12px 32px;
+  z-index 9;
+  border-radius: 5px;
+  margin: 0;
+}
+```
+
+- Classes should _always_ use kebab case.
+```CSS
+// Good
+.some-long-class-name { ... }
+
+// Bad
+.doNotUseCamelCase { ... }
+.DoNotUsePascalcase { ... }
+.do_not_use_snake_case { ... }
+```
 
 ## TypeScript
 #### Angular
