@@ -1,4 +1,4 @@
-# Taylor LaMar Consulting - House Styes
+# LaMar Software - House Styes
 Below is a general programming style guide.
 
 
