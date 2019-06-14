@@ -176,6 +176,8 @@ import { Model, Car } from './car.class';
 
 import { AuthService } from './services/auth.service';
 
+import { Team } from './interfaces/team.interface';
+
 import { environment } from './environments/environment';
 
 import * as anime from 'anime';
