@@ -163,6 +163,7 @@ await db.query(`
 import ... from '@angular/...' // Angular packages
 import ... from 'classes/...' // Classes
 import ... from 'services/...' // Services
+import ... from 'interfaces/...' // Interfaces
 import ... from 'environments/...' // Environments
 import ... from '...' // Third-party libraries, in alphabetical order
 ```
