@@ -238,3 +238,11 @@ constructor() {}
  ```
  <issue_type> <issue_number>
  ```
+- The issue type is typically "Issue" unless otherwise specified but can be any of the following:
+  - Issue: General rollout of technologies or solutions
+  - Bug:  Problem that impairs product or service functionality
+  - Hotfix: Any issue pushed straight to the `master` branch, marked for immediate integration
+  - Feature:  Functionality request expressed from the perspective of the user
+  - Incident: System outage or incident
+  - Service Request: General request for a product, service, or integration
+  - Research: Formal gathering of data, requirements, informations, and facts
