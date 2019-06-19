@@ -239,7 +239,7 @@ constructor() {}
  ```
  <issue_type> <issue_number>
  ```
-- The issue type by default is "Issue" as it's the most generic, but can be any of the following:
+- The issue type should be title case and the default is "Issue" as it's the most generic, but can be any of the following:
   - Issue: General rollout of technologies or solutions
   - Bug:  Problem that impairs product or service functionality
   - Hotfix: Any issue pushed straight to the `master` branch, marked for immediate integration
