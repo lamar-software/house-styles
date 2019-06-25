@@ -243,7 +243,6 @@ constructor() {}
   - Issue: General rollout of technologies or solutions
   - Bug:  Problem that impairs product or service functionality
   - Hotfix: Any issue pushed straight to the `master` branch, marked for immediate integration
-  - Feature:  Functionality request expressed from the perspective of the user
-  - Incident: System outage or incident
+  - Enhancement:  Functionality request expressed from the perspective of the user
   - Service Request: General request for a product, service, or integration
   - Research: Formal gathering of data, requirements, informations, and facts
