@@ -3,7 +3,7 @@ Below is a general programming style guide.
 
 
 ## General
-- Use 2 spaces.
+- Use 2 spaces. XML and manifest-type files are allowed to use 4 spaces.
 - Column number should not exceed 100.
 - Add block comments only when necessary; many functions are self-explanatory. Ask yourself, "Does the function explain what I'm doing?"
  ```TypeScript
@@ -40,13 +40,13 @@ const [car] = cars;
 const { model: carModel } = car;
 ```
 
-#### Naming Classes
+### Naming Classes
 - Classes should _always_ use Pascal case.
 ```TypeScript
 class CarManufacture {}
 ```
 
-#### Naming Variables
+### Naming Variables
 - Variable names should _not_ capitalize abbreviations, only acronyms if they are _not_ standalone. Variable names should also follow camel case. For example:
 ```TypeScript
 // Good
@@ -73,7 +73,46 @@ function doCreate() { ... }
 function addManufactureDo() { ... }
 ```
 
-#### SQL Statements
+### Imports
+- Imports are grouped in meaningful groups, and their order should be as follows, with a line  between each import group.
+```TypeScript
+// Example using Angular
+import ... from '@angular/...'             // Framework-specific packages
+import ... from 'modules/...'              // Modules and macros
+import ... from 'classes/...'              // Classes
+import ... from 'services/...'             // Services
+import ... from 'utils/...'                // Utilities
+import ... from 'interfaces-and-types/...' // Interfaces and types
+import ... from 'environments/...'         // Environments
+import ... from '...'                      // Third-party libraries, in alphabetical order
+```
+
+For example:
+```TypeScript
+// Another example using Angular
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
+import { _MixinBase } from './mixins';
+
+import { Model, Car } from './car.class';
+
+import { AuthService } from './services/auth.service';
+
+import { LogError } from './utils';
+
+import { Team } from './interfaces/team.interface';
+import { User } from './types/user.types';
+
+import { environment } from './environments/environment';
+
+import * as anime from 'anime';
+import * as moment from 'moment';
+```
+
+- For Angular Material v8+ imports, see [here](https://github.com/lamar-software/house-styles#angular-material-v8+-imports).
+
+### SQL Statements
 - Keywords should always be upppercase.
 - Statements that are longer than 100 characters should have meaningful linebreaks, using ES6 template literals (or language equivalent). For example:
 ```TypeScript
@@ -156,36 +195,7 @@ await db.query(`
 .do_not_use_snake_case { ... }
 ```
 
-## TypeScript
-#### Angular
-- Imports are grouped in meaningful groups, and their order should be as follows, with a line  between each import group.
-```TypeScript
-import ... from '@angular/...' // Angular packages
-import ... from 'classes/...' // Classes
-import ... from 'services/...' // Services
-import ... from 'interfaces/...' // Interfaces
-import ... from 'environments/...' // Environments
-import ... from '...' // Third-party libraries, in alphabetical order
-```
-
-For example:
-```TypeScript
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-
-import { Model, Car } from './car.class';
-
-import { AuthService } from './services/auth.service';
-
-import { Team } from './interfaces/team.interface';
-
-import { environment } from './environments/environment';
-
-import * as anime from 'anime';
-import * as moment from 'moment';
-
-```
-
+## Angular
 - Class properties also have a structure, though it is loosely-defined and the developer is responsible for grouping together properties.  Class properties should follow this convention as best as possible:
 ```TypeScript
 // Decorated class properties, i.e.
@@ -215,34 +225,50 @@ constructor() {}
 // Finally, Angular's lifecycle methods in the order in which they are called
 ```
 
+### Angular Material v8+ Imports
+- Angular Material v8 introduces a different structure in their material library imports.  Rather than destructure multiple objects from a single library index, you are required to destructure a single object from multiple library indexes.  For example:
+```TypeScript
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+```
+
+- There should _always_ be a line break between core Angular imports and Angular Material imports, with the Angular core  imports before Angular Material imports.
+- Library imports should be alphabetical, using the librari path suffix as your point of reference.
+
 ## Git
-#### Branches
-- Branches should follow this convention:
- ```
-  <issue_type>-<issue_number> 
- ```
-
-#### Commits
-- Each commit should be a single logical change. Don't make several logical changes in one commit. For example, if a patch fixes a bug and optimizes the performance of a feature, split it into two separate commits.
--  Ideally, coimmit messages should be no longer than 50 characters.
--  Commit messages should be capitalized and written in imperative present tense and should not end with a period.
- ```
- # Good
- Mark huge records as obsolete when clearing hinting faults
-
- # Bad
- fixed ActiveModel::Errors deprecation messages failing when AR was used outside of Rails.
- ```
-
-#### Pull Requests
-- PR titles should follow this convention:
- ```
- <issue_type> <issue_number>
- ```
-- The issue type should be title case and the default is "Issue" as it's the most generic, but can be any of the following:
+### Issue Types
+- The default issue type is "Issue" as it's the most generic, but can be any of the following:
   - Issue: General rollout of technologies or solutions
   - Bug:  Problem that impairs product or service functionality
   - Hotfix: Any issue pushed straight to the `master` branch, marked for immediate integration
   - Enhancement:  Functionality request expressed from the perspective of the user
   - Service Request: General request for a product, service, or integration
   - Research: Formal gathering of data, requirements, informations, and facts
+
+### Branches
+- Branches should follow this convention:
+ ```
+  <issue_type>-<issue_number> 
+ ```
+
+### Commits
+- Each commit should be a single logical change. Don't make several logical changes in one commit. For example, if a patch fixes a bug and optimizes the performance of a feature, split it into two separate commits.
+- Ideally, coimmit messages should be no longer than 50 characters.
+- Commit messages should be capitalized and written in imperative present tense and should not end with a period.
+```
+# Good
+Mark huge records as obsolete when clearing hinting faults
+
+# Bad
+fixed ActiveModel::Errors deprecation messages failing when AR was used outside of Rails.
+```
+
+### Pull Requests
+- PR titles should follow this convention:
+```
+<issue_type> <issue_number>
+```
+- The issue type should be title case.
