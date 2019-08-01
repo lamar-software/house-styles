@@ -110,7 +110,7 @@ import * as anime from 'anime';
 import * as moment from 'moment';
 ```
 
-- For Angular Material v8+ imports, see [here](https://github.com/lamar-software/house-styles#angular-material-v8+-imports).
+- For Angular Material v8+ imports, see [here](https://github.com/lamar-software/house-styles#angular-material-v8-imports).
 
 ### SQL Statements
 - Keywords should always be upppercase.
