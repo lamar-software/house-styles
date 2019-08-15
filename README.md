@@ -293,11 +293,11 @@ fixed ActiveModel::Errors deprecation messages failing when AR was used outside 
 
 Some examples:
 ```JavaScript
-console.warning(timestamp, 'NodeApiServer:Braintree.updateSubscriptionAmount - No payment method found.');
+console.warning(timestamp, '- NodeApiServer:Braintree.updateSubscriptionAmount - No payment method found.');
 // 2019-08-14T09:34:38 - NodeApiServer:Braintree.updateSubscriptionAmount - No payment method found.
 ```
 ```Java
-System.out.println(timestamp + "CronjobNightly:User.sendNotifications - Phone number is " + phoneNumber + ", but no alert sent.");
+System.out.println(timestamp + "- CronjobNightly:User.sendNotifications - Phone number is " + phoneNumber + ", but no alert sent.");
 // 2019-08-15T11:13:49 - CronjobNightly:User.sendNotifications - Phone number is +12093227884, but no alert sent.
 ```
 
