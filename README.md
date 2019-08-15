@@ -1,6 +1,12 @@
 # LaMar Software - House Styes
-Below is a general programming style guide.
+Table of contents
 
+- #### [General](https://github.com/lamar-software/house-styles#general)
+- #### [HTML](https://github.com/lamar-software/house-styles#html)
+- #### [CSS](https://github.com/lamar-software/house-styles#css)
+- #### [Angular](https://github.com/lamar-software/house-styles#angular)
+- #### [Git](https://github.com/lamar-software/house-styles#git)
+- #### [Logging](https://github.com/lamar-software/house-styles#logging)
 
 ## General
 - Use 2 spaces. XML and manifest-type files are allowed to use 4 spaces.
@@ -272,3 +278,34 @@ fixed ActiveModel::Errors deprecation messages failing when AR was used outside 
 <issue_type> <issue_number>
 ```
 - The issue type should be title case.
+
+## Logging
+- Generally, logging should be used sparingly within your codebase.  Producing logs is thread-blocking and slow.  However, it can be incredibly useful for standalone or fickle processes where there are many opportunities for a process to break; it's useful to know when and where a process broke unexpectedly.
+- Use the language's default logger - i.e. `Console`, `System.out`, `cout`, etc. 
+- Logs should always provide the event name, a description (if applicable), and use proper grammer and punctuation, ending with a period.  The convention should be as follows:
+```Bash
+<timestamp - environment or process_name>:<wrapper or class_name>.<method or function_name> 
+<hyphen | newline>*
+<your_description_here>
+
+* Hyphens are preferred.  If the log is particularly long, then use a newline.
+```
+
+Some examples:
+```JavaScript
+console.warning(timestamp, 'NodeApiServer:Braintree.updateSubscriptionAmount - No payment method found.');
+// 2019-08-14T09:34:38 - NodeApiServer:Braintree.updateSubscriptionAmount - No payment method found.
+```
+```Java
+System.out.println(timestamp + "CronjobNightly:User.sendNotifications - Phone number is " + phoneNumber + ", but no alert sent.");
+// 2019-08-15T11:13:49 - CronjobNightly:User.sendNotifications - Phone number is +12093227884, but no alert sent.
+```
+
+- Your logs should target the developer who is handling any potential issues.
+- Do not use custom log formatting.
+- It should be noted that this is a similar convention used when storing event audits.
+
+### Further Reading
+- [Grammer is important](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions#use-grammatically-correct-error-messages), from Best Practices for Exceptions on MSDN.
+- [Tailor the log](https://docs.microsoft.com/en-us/dotnet/api/system.exception.message?redirectedfrom=MSDN&view=netframework-4.8#remarks), taken from MSDN's remarks on throwing Exceptions in .NET.
+- [Don't log an object by itself](https://developer.mozilla.org/en-US/docs/Web/API/Console/log#Logging_objects), but a copy of the object.
