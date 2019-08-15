@@ -1,12 +1,12 @@
 # LaMar Software - House Styes
 Table of contents
 
-- #### [General](https://github.com/lamar-software/house-styles#general)
-- #### [HTML](https://github.com/lamar-software/house-styles#html)
-- #### [CSS](https://github.com/lamar-software/house-styles#css)
-- #### [Angular](https://github.com/lamar-software/house-styles#angular)
-- #### [Git](https://github.com/lamar-software/house-styles#git)
-- #### [Logging](https://github.com/lamar-software/house-styles#logging)
+- [General](https://github.com/lamar-software/house-styles#general)
+- [HTML](https://github.com/lamar-software/house-styles#html)
+- [CSS](https://github.com/lamar-software/house-styles#css)
+- [Angular](https://github.com/lamar-software/house-styles#angular)
+- [Git](https://github.com/lamar-software/house-styles#git)
+- [Logging](https://github.com/lamar-software/house-styles#logging)
 
 ## General
 - Use 2 spaces. XML and manifest-type files are allowed to use 4 spaces.
