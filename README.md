@@ -306,6 +306,6 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
 - It should be noted that this is a similar convention used when storing event audits.
 
 ### Further Reading
-- [Grammer is important](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions#use-grammatically-correct-error-messages), from Best Practices for Exceptions on MSDN.
+- [Grammar is important](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions#use-grammatically-correct-error-messages), from Best Practices for Exceptions on MSDN.
 - [Tailor the log](https://docs.microsoft.com/en-us/dotnet/api/system.exception.message?redirectedfrom=MSDN&view=netframework-4.8#remarks), taken from MSDN's remarks on throwing Exceptions in .NET.
 - [Don't log an object by itself](https://developer.mozilla.org/en-US/docs/Web/API/Console/log#Logging_objects), but a copy of the object.
