@@ -1,4 +1,4 @@
-# LaMar Software - House Styes
+# LaMar Software - House Styles
 Table of contents
 
 - [General](https://github.com/lamar-software/house-styles#general)
