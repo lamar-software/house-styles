@@ -47,6 +47,20 @@ const [car] = cars;
 const { model: carModel } = car;
 ```
 
+- Always use `err` to name errors, e.g. in a `try / catch` block.
+```TypeScript
+try {
+  ...
+} catch (err) {
+  console.log(err);
+}
+```
+
+- Always use `e` to name event objects, e.g. inside a click event handler.
+```TypeScript
+handleClick(e: MouseEvent): void { ... }
+```
+
 ### Naming Classes
 - Classes should _always_ use Pascal case.
 ```TypeScript
