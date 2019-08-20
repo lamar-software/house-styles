@@ -7,6 +7,7 @@ Table of contents
 - [Angular](https://github.com/lamar-software/house-styles#angular)
 - [Git](https://github.com/lamar-software/house-styles#git)
 - [Logging](https://github.com/lamar-software/house-styles#logging)
+- [Databases](https://github.com/lamar-software/house-styles#databases)
 
 ## General
 - Use 2 spaces. XML and manifest-type files are allowed to use 4 spaces.
@@ -309,3 +310,20 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
 - [Grammar is important](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions#use-grammatically-correct-error-messages), from Best Practices for Exceptions on MSDN.
 - [Tailor the log](https://docs.microsoft.com/en-us/dotnet/api/system.exception.message?redirectedfrom=MSDN&view=netframework-4.8#remarks), taken from MSDN's remarks on throwing Exceptions in .NET.
 - [Don't log an object by itself](https://developer.mozilla.org/en-US/docs/Web/API/Console/log#Logging_objects), but a copy of the object.
+
+## Databases
+- Table and column names should always be pascal case and singular, i.e. `CarManufacture` could house car manufactures.
+- Foreign keys *must* be named consistently in different tables.
+- Always add foreign key constraints when possible.
+- Fields representing the same kind of data on different tables should be named the same. Don't use `Zip` on one table and `ZipCode` on another.
+- Don't artifically shorten or abbreviate words. It is better for a name to be long and clear than short and confusing.
+  - For example, what could `Cus_AddRef` represent?  Custodial Addressee Reference?  Customer Additional Refund?  Custom Address Referral?
+- Use underscores consistently and for a particular purpose.  Table names should be clear enough with pascal casing; you don't need underscores to separate words.  Save underscores either to indicate an associative table or for prefixing.
+
+
+### Columns Order
+- The order of columns, like ordering class properties, are subjective but there are some best practices:
+  - Primary keys should always go first
+  - Foreign keys should follow primary keys
+  - ...data, in order of importance or relevance...
+  - Metadata fields, i.e. `DateCached`, `DeletedFlag` should always be last
