@@ -319,6 +319,7 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
 - Your logs should target the developer who is handling any potential issues.
 - Do not use custom log formatting.
 - It should be noted that this is a similar convention used when storing event audits.
+- Logs can contain multiple lines with tabs (denoted with 2 spaces) to list key-value pairs for an object.
 
 ### Further Reading
 - [Grammar is important](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions#use-grammatically-correct-error-messages), from Best Practices for Exceptions on MSDN.
