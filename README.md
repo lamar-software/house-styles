@@ -298,7 +298,7 @@ fixed ActiveModel::Errors deprecation messages failing when AR was used outside 
 - Generally, logging should be used sparingly within your codebase.  Producing logs is thread-blocking and slow.  However, it can be incredibly useful for standalone or fickle processes where there are many opportunities for a process to break; it's useful to know when and where a process broke unexpectedly.
 - Use the language's default logger - i.e. `Console`, `System.out`, `cout`, etc. 
 - Logs should always provide the event name, a description (if applicable), and use proper grammer and punctuation, ending with a period.  The convention should be as follows:
-```Bash
+```
 <timestamp - environment or process_name>:<wrapper or class_name>.<method or function_name> 
 <hyphen | newline>*
 <your_description_here>
@@ -306,7 +306,14 @@ fixed ActiveModel::Errors deprecation messages failing when AR was used outside 
 * Hyphens are preferred.  If the log is particularly long, then use a newline.
 ```
 
-Some examples:
+- If the function is particularly verbose, then use a `#` to identify a specific block within that function.  For example:
+```JavaScript
+console.warning(timestamp, ' - Cronjob:Braintree.updateSubscriptionAmount#processTeamBilling\nNo customerID found.');
+// 2019-08-14T09:34:38 - NodeApiServer:Braintree.updateSubscriptionAmount#processTeamBilling
+// No customerID found.
+```
+
+Some other examples:
 ```JavaScript
 console.warning(timestamp, ' - NodeApiServer:Braintree.updateSubscriptionAmount - No payment method found.');
 // 2019-08-14T09:34:38 - NodeApiServer:Braintree.updateSubscriptionAmount - No payment method found.
