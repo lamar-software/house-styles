@@ -205,7 +205,7 @@ await db.query(`
 }
 ```
 
-- Classes should _always_ use kebab case.
+- Classes and ids should _always_ use kebab case.
 ```CSS
 // Good
 .some-long-class-name { ... }
