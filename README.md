@@ -334,13 +334,13 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
 - [Don't log an object by itself](https://developer.mozilla.org/en-US/docs/Web/API/Console/log#Logging_objects), but a copy of the object.
 
 ## Databases
-- Table and column names should always be pascal case and singular, i.e. `CarManufacture` could house car manufactures.
+- Table and column names should either be snake case or Pascal case and singular, i.e. `CarManufacture` could house car manufactures.
 - Foreign keys *must* be named consistently in different tables.
 - Always add foreign key constraints when possible.
 - Fields representing the same kind of data on different tables should be named the same. Don't use `Zip` on one table and `ZipCode` on another.
 - Don't artifically shorten or abbreviate words. It is better for a name to be long and clear than short and confusing.
   - For example, what could `Cus_AddRef` represent?  Custodial Addressee Reference?  Customer Additional Refund?  Custom Address Referral?
-- Use underscores consistently and for a particular purpose.  Table names should be clear enough with pascal casing; you don't need underscores to separate words.  Save underscores either to indicate an associative table or for prefixing.
+- Use underscores consistently and for a particular purpose.  Table names that use Pascal case should be clear; you don't need underscores to separate words.  Save underscores either to indicate an associative table or for prefixing.
 
 
 ### Columns Order
