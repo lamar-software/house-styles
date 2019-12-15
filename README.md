@@ -41,6 +41,12 @@ if(car.model ==='F150'){
 }
 ```
 
+- Always use brakcet notation to define object properties if possible.
+```TypeScript
+obj.field = 'This is good';
+obj['field'] = 'This is not';
+```
+
 - Always add a space when destructuring objects. Never add a space when destructuring arrays.
 ```TypeScript
 const [car] = cars;
