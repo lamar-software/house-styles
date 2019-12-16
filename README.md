@@ -41,7 +41,7 @@ if(car.model ==='F150'){
 }
 ```
 
-- Always use brakcet notation to define object properties if possible.
+- Always use dot notation to define object properties if possible.
 ```TypeScript
 obj.field = 'This is good';
 obj['field'] = 'This is not';
