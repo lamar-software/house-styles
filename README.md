@@ -100,6 +100,14 @@ function doCreate() { ... }
 function addManufactureDo() { ... }
 ```
 
+- Enum or dictionary-type variables should be singular.
+```TypeScript
+const LOCAL_STORAGE_KEY = {
+  AUTH_TOKEN: 'authToken',
+  AUTH_EXPIRES: 'authExpires'
+};
+```
+
 ### Imports
 - Imports are grouped in meaningful groups, and their order should be as follows, with a line  between each import group.
 ```TypeScript
