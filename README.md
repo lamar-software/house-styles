@@ -8,6 +8,7 @@ Table of contents
 - [Git](https://github.com/lamar-software/house-styles#git)
 - [Logging](https://github.com/lamar-software/house-styles#logging)
 - [Databases](https://github.com/lamar-software/house-styles#databases)
+- [Resource Identifiers](https://github.com/lamar-software/house-styles#resource-identifiers)
 
 ## General
 - Use 2 spaces. XML and manifest-type files are allowed to use 4 spaces.
@@ -363,3 +364,14 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
   - Foreign keys should follow primary keys
   - ...data, in order of importance or relevance...
   - Metadata fields, i.e. `DateCached`, `DeletedFlag` should always be last
+  
+## Resource Identifiers
+- Resource identifier elements should be comnbined with colons. For example:
+```
+MyAccount:RegisteredDevices // could represent /my-account/registered-devices
+```
+  - Why is this important? Redirect URLs are not always available to or accepted by the client that initiated the request and it's imperative that an API is easily accessible and maintains platform agnosticism.
+
+### Further Reading
+- [RFC 3986](https://tools.ietf.org/html/rfc3986)
+- [Difference Between URL and URI](https://www.difference.wiki/url-vs-uri)
