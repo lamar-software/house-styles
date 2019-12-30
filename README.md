@@ -46,6 +46,7 @@ if(car.model ==='F150'){
 ```TypeScript
 obj.field = 'This is good';
 obj['field'] = 'This is not';
+obj['name-with-hyphens'] = 'This is acceptable';
 ```
 
 - Always add a space when destructuring objects. Never add a space when destructuring arrays.
@@ -66,6 +67,18 @@ try {
 - Always use `e` to name event objects, e.g. inside a click event handler.
 ```TypeScript
 handleClick(e: MouseEvent): void { ... }
+```
+
+- Always use a single newline to separate meaningful blocks of code.
+```TypeScript
+import { Component } from '@angular/core';
+import { FlexLayout } from '@angular/material';
+
+const carModel = 'Ford Focus';
+const carType = 'Hatchback';
+
+function getCarManufacture() { ... }
+function getHorsepower() { ... }
 ```
 
 ### Naming Classes
