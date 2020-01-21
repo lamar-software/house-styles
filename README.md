@@ -55,6 +55,14 @@ const [car] = cars;
 const { model: carModel } = car;
 ```
 
+- Always include a verb in boolean variable names.
+```TypeScript
+const hasVehicles; // rather than 'vehicles'
+const isLoading; // rather than 'loading'
+const shouldUpdate; // rather than 'update'
+const didClickAccept; // ...and so on...
+```
+
 - Always use `err` to name errors, e.g. in a `try / catch` block.
 ```TypeScript
 try {
