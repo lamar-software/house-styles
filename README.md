@@ -8,6 +8,7 @@ Table of contents
 - [Git](https://github.com/lamar-software/house-styles#git)
 - [Logging](https://github.com/lamar-software/house-styles#logging)
 - [Databases](https://github.com/lamar-software/house-styles#databases)
+- [Files and Folders](https://github.com/lamar-software/house-styles#files-and-folders)
 - [Resource Identifiers](https://github.com/lamar-software/house-styles#resource-identifiers)
 
 ## General
@@ -385,7 +386,12 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
   - Foreign keys should follow primary keys
   - ...data, in order of importance or relevance...
   - Metadata fields, i.e. `DateCached`, `DeletedFlag` should always be last
-  
+
+## Files and Folders
+- Procedural or functional files should be named using snake case.
+- Folders should also be named using snake case.
+- Class files should be named using pascal case.
+
 ## Resource Identifiers
 - Resource identifier elements should be comnbined with colons. For example:
 ```
