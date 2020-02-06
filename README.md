@@ -391,6 +391,15 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
 - Procedural or functional files should be named using snake case.
 - Folders should also be named using snake case.
 - Class files should be named using pascal case.
+- Database dumps should be named using the following convention:
+```
+// Convention
+{{ database_name }}_data_{{ year }}-{{ month }}-day-{{ issue_number }}.sql
+
+// Examples
+poolorchard_data_2020-02-06.sql
+poolorchard_data_2020-02-06-00085.sql
+```
 
 ## Resource Identifiers
 - Resource identifier elements should be comnbined with colons. For example:
