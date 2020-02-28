@@ -314,7 +314,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 ### Commits
 - Each commit should be a single logical change. Don't make several logical changes in one commit. For example, if a patch fixes a bug and optimizes the performance of a feature, split it into two separate commits.
-- Ideally, coimmit messages should be no longer than 50 characters.
+- Ideally, commit messages should be no longer than 50 characters.
 - Commit messages should be capitalized and written in imperative present tense and should not end with a period.
 ```
 # Good
