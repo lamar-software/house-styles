@@ -303,6 +303,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   - Bug:  Problem that impairs product or service functionality
   - Hotfix: Any issue pushed straight to the `master` branch, marked for immediate integration
   - Enhancement:  Functionality request expressed from the perspective of the user
+  - Feat: Alternative to "Enhancement"
   - Service Request: General request for a product, service, or integration
   - Research: Formal gathering of data, requirements, informations, and facts
 
@@ -311,6 +312,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
  ```
   <issue_type>-<issue_number> 
  ```
+- If no issue number is assigned, then can you use plain English. For example:
+```
+feat-new-button
+```
 
 ### Commits
 - Each commit should be a single logical change. Don't make several logical changes in one commit. For example, if a patch fixes a bug and optimizes the performance of a feature, split it into two separate commits.
