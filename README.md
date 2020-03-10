@@ -4,6 +4,7 @@ Table of contents
 - [General](https://github.com/lamar-software/house-styles#general)
 - [HTML](https://github.com/lamar-software/house-styles#html)
 - [CSS](https://github.com/lamar-software/house-styles#css)
+- [TypeScript](https://github.com/lamar-software/house-styles#typescript)
 - [Angular](https://github.com/lamar-software/house-styles#angular)
 - [Git](https://github.com/lamar-software/house-styles#git)
 - [Logging](https://github.com/lamar-software/house-styles#logging)
@@ -252,6 +253,21 @@ await db.query(`
 .DoNotUsePascalcase { ... }
 .do_not_use_snake_case { ... }
 ```
+
+## TypeScript
+
+### Compiler Options
+- The following flags should be added to the `tsconfig.json` file:
+  - `forceConsistentCasingInFileNames`
+  - `noImplicitReturns`
+  - `strict`
+  - `noUnusedLocals`
+
+- The `strict` flag covers four other flags which you could add independetly if you want to progressively introduce TypeScript to an existing codebase **which is the recommended approach**. Those flags are:
+  - `noImplicitAny`
+  - `noImplicitThis`
+  - `strictNullChecks`
+  - `alwaysStrict`
 
 ## Angular
 - Class properties also have a structure, though it is loosely-defined and the developer is responsible for grouping together properties.  Class properties should follow this convention as best as possible:
