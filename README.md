@@ -91,6 +91,13 @@ function getCarManufacture() { ... }
 function getHorsepower() { ... }
 ```
 
+- All async statements require an error handler. For example:
+```TypeScript
+fetch(env.someApiurl)
+  .then(() => { ... });
+  .catch(() => { ... });
+```
+
 ### Naming Classes
 - Classes should _always_ use Pascal case.
 ```TypeScript
