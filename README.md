@@ -32,7 +32,7 @@ Table of contents
  function login(payload: AuthPayload): void { ... }
  ```
 
-- Always add a space between keywords, operators, clauses, and syntax delimieters
+- Always add a space between keywords, operators, clauses, and syntax delimiters
 ```TypeScript
 // Good
 if (car.model === 'F150') {
@@ -181,7 +181,7 @@ import * as moment from 'moment';
 
 ### SQL Statements
 - Keywords should always be upppercase.
-- Statements that are longer than 100 characters should have meaningful linebreaks, using ES6 template literals (or language equivalent). For example:
+- Statements that are longer than 100 characters should have meaningful line breaks, using ES6 template literals (or language equivalent). For example:
 ```TypeScript
 // SELECT
 await db.query('SELECT * FROM car');
@@ -271,7 +271,7 @@ await db.query(`
   - `strict`
   - `noUnusedLocals`
 
-- The `strict` flag covers four other flags which you could add independetly if you want to progressively introduce TypeScript to an existing codebase **which is the recommended approach**. Those flags are:
+- The `strict` flag covers four other flags which you could add independently if you want to progressively introduce TypeScript to an existing codebase **which is the recommended approach**. Those flags are:
   - `noImplicitAny`
   - `noImplicitThis`
   - `strictNullChecks`
@@ -318,7 +318,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 ```
 
 - There should _always_ be a line break between core Angular imports and Angular Material imports, with the Angular core  imports before Angular Material imports.
-- Library imports should be alphabetical, using the librari path suffix as your point of reference.
+- Library imports should be alphabetical, using the library path suffix as your point of reference.
 
 ## Git
 ### Issue Types
@@ -404,7 +404,7 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
 - Foreign keys *must* be named consistently in different tables.
 - Always add foreign key constraints when possible.
 - Fields representing the same kind of data on different tables should be named the same. Don't use `Zip` on one table and `ZipCode` on another.
-- Don't artifically shorten or abbreviate words. It is better for a name to be long and clear than short and confusing.
+- Don't artificially shorten or abbreviate words. It is better for a name to be long and clear than short and confusing.
   - For example, what could `Cus_AddRef` represent?  Custodial Addressee Reference?  Customer Additional Refund?  Custom Address Referral?
 - Use underscores consistently and for a particular purpose.  Table names that use Pascal case should be clear; you don't need underscores to separate words.  Save underscores either to indicate an associative table or for prefixing.
 
@@ -431,10 +431,11 @@ poolorchard_data_2020-02-06-00085.sql
 ```
 
 ## Resource Identifiers
-- Resource identifier elements should be comnbined with colons. For example:
+- Resource identifier elements should be combined with colons. For example:
 ```
 MyAccount:RegisteredDevices // could represent /my-account/registered-devices
 ```
+
   - Why is this important? Redirect URLs are not always available to or accepted by the client that initiated the request and it's imperative that an API is easily accessible and maintains platform agnosticism.
 
 ### Further Reading
