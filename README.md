@@ -14,6 +14,7 @@ Table of contents
 
 ## General
 - Use 2 spaces. XML and manifest-type files are allowed to use 4 spaces.
+- Source files should _always_ end with a newline.
 - Column number should not exceed 100.
 - Add block comments only when necessary; many functions are self-explanatory. Ask yourself, "Does the function explain what I'm doing?"
  ```TypeScript
