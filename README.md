@@ -417,8 +417,8 @@ System.out.println(timestamp + " - CronjobNightly:User.sendNotifications - Phone
   - Metadata fields, i.e. `DateCached`, `DeletedFlag` should always be last
 
 ## Files and Folders
-- Procedural or functional files should be named using snake case.
-- Folders should also be named using snake case.
+- Procedural or functional files should be named using kebab case.
+- Folders should also be named using kebab case.
 - Class files should be named using pascal case.
 - Database dumps should be named using the following convention:
 ```
